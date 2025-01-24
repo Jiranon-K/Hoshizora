@@ -14,10 +14,16 @@ export const metadata: Metadata = {
   
 export default function Home() {
   return (
-    <div className="relative w-full h-full flex items-center justify-center bg-base-100 px-4 sm:px-6 lg:px-8">
+    <div className="w-full h-full flex items-center justify-center bg-base-100 px-4 sm:px-6 lg:px-8">
       <div className={styles.textContainer}>
-        <span className={`text-4xl sm:text-6xl lg:text-8xl font-bold text-center ${styles.starryText}`}>HOSHIZORA</span>
-        <p className={`mt-2 sm:mt-4 text-sm sm:text-base lg:text-lg font-mono text-center ${styles.codeText}`}>
+        <div className="w-fit flex items-center justify-center">
+          <span className={`text-4xl sm:text-6xl lg:text-8xl font-bold text-center ${styles.starryText}`}>
+            HOSHIZORA
+          </span>
+        </div>
+        <p
+          className={`whitespace-nowrap mt-2 sm:mt-4 text-sm sm:text-base lg:text-lg font-mono text-center ${styles.codeText}`}
+        >
           &lt; Dream. Code. Inspire. /&gt;
         </p>
       </div>

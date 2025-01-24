@@ -68,7 +68,7 @@ const Navbar = () => {
       {/* Mobile menu */}
       {isOpen && (
         <div className="lg:hidden absolute top-full left-0 right-0 p-4 bg-base-100 border-b border-base-content/10">
-          <div className="flex flex-col gap-2">
+          <div className="flex flex-col gap-2 w-full">
             <Link href="/" className="btn btn-ghost w-full justify-start" onClick={() => setIsOpen(false)}>
               Home
             </Link>

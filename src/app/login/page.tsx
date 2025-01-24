@@ -40,10 +40,10 @@ export default function LoginPage() {
   }
 
   return (
-    <div className="min-h-screen flex items-center justify-center px-4">
+    <div className="w-full h-full flex items-center justify-center px-4">
       <div className={styles.glassCard}>
         <h1 className="text-3xl font-bold text-center mb-8">Welcome Back</h1>
-        
+
         {error && (
           <div className="alert alert-error mb-4">
             <span>{error}</span>
@@ -94,12 +94,8 @@ export default function LoginPage() {
             </label>
           </div>
 
-          <button 
-            type="submit" 
-            className={`btn btn-primary w-full ${loading ? 'loading' : ''}`}
-            disabled={loading}
-          >
-            {loading ? 'Signing in...' : 'Sign in'}
+          <button type="submit" className={`btn btn-primary w-full ${loading ? "loading" : ""}`} disabled={loading}>
+            {loading ? "Signing in..." : "Sign in"}
           </button>
         </form>
 
@@ -111,12 +107,12 @@ export default function LoginPage() {
         </button>
 
         <p className="text-center mt-4">
-          Don't have an account?{' '}
+          Don't have an account?{" "}
           <a href="/register" className="link link-primary">
             Sign up
           </a>
         </p>
       </div>
     </div>
-  )
+  );
 }

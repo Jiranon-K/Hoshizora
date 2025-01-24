@@ -33,12 +33,10 @@ export default function RegisterForm() {
   }
 
   return (
-    <main className="min-h-screen flex items-center justify-center px-4 py-8 sm:px-6 lg:px-8">
+    <main className="w-full h-full flex items-center justify-center px-4 py-8 sm:px-6 lg:px-8">
       <div className={`${styles.glassCard} w-full max-w-md mx-auto`}>
-        <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-center mb-6 sm:mb-8">
-          Create Account
-        </h1>
-        
+        <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-center mb-6 sm:mb-8">Create Account</h1>
+
         <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
           <div className="form-control">
             <label className="label">
@@ -52,7 +50,7 @@ export default function RegisterForm() {
                 placeholder="username"
                 className="input input-bordered pl-10 w-full h-12 text-base sm:text-lg"
                 value={formData.username}
-                onChange={(e) => setFormData(prev => ({...prev, username: e.target.value}))}
+                onChange={(e) => setFormData((prev) => ({ ...prev, username: e.target.value }))}
                 required
               />
             </div>
@@ -70,7 +68,7 @@ export default function RegisterForm() {
                 placeholder="your@email.com"
                 className="input input-bordered pl-10 w-full h-12 text-base sm:text-lg"
                 value={formData.email}
-                onChange={(e) => setFormData(prev => ({...prev, email: e.target.value}))}
+                onChange={(e) => setFormData((prev) => ({ ...prev, email: e.target.value }))}
                 required
               />
             </div>
@@ -88,7 +86,7 @@ export default function RegisterForm() {
                 placeholder="••••••••"
                 className="input input-bordered pl-10 w-full h-12 text-base sm:text-lg"
                 value={formData.password}
-                onChange={(e) => setFormData(prev => ({...prev, password: e.target.value}))}
+                onChange={(e) => setFormData((prev) => ({ ...prev, password: e.target.value }))}
                 required
                 minLength={8}
               />
@@ -107,7 +105,7 @@ export default function RegisterForm() {
                 placeholder="••••••••"
                 className="input input-bordered pl-10 w-full h-12 text-base sm:text-lg"
                 value={formData.confirmPassword}
-                onChange={(e) => setFormData(prev => ({...prev, confirmPassword: e.target.value}))}
+                onChange={(e) => setFormData((prev) => ({ ...prev, confirmPassword: e.target.value }))}
                 required
               />
             </div>
@@ -119,19 +117,15 @@ export default function RegisterForm() {
                 type="checkbox"
                 className={styles.customCheckbox}
                 checked={formData.acceptTerms}
-                onChange={(e) => setFormData(prev => ({...prev, acceptTerms: e.target.checked}))}
+                onChange={(e) => setFormData((prev) => ({ ...prev, acceptTerms: e.target.checked }))}
               />
               <span className="label-text">I accept the terms and conditions</span>
             </label>
           </div>
 
           <div className="form-control mt-6">
-            <button 
-              type="submit" 
-              className="btn btn-primary w-full h-12 text-base sm:text-lg"
-              disabled={loading}
-            >
-              {loading ? 'Creating Account...' : 'Sign up'}
+            <button type="submit" className="btn btn-primary w-full h-12 text-base sm:text-lg" disabled={loading}>
+              {loading ? "Creating Account..." : "Sign up"}
             </button>
           </div>
         </form>
@@ -144,12 +138,12 @@ export default function RegisterForm() {
         </button>
 
         <p className="text-center mt-6 sm:mt-8 text-sm sm:text-base">
-          Already have an account?{' '}
+          Already have an account?{" "}
           <Link href="/login" className="link link-primary">
             Sign in
           </Link>
         </p>
       </div>
     </main>
-  )
+  );
 }

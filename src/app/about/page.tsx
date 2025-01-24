@@ -86,18 +86,14 @@ export default function AboutPage() {
 
   if (loading) {
     return (
-      <div className="min-h-screen flex items-center justify-center">
+      <div className="w-full h-full flex items-center justify-center">
         <span className="loading loading-spinner loading-lg"></span>
       </div>
     )
   }
 
   if (error) {
-    return (
-      <div className="min-h-screen flex items-center justify-center text-error">
-        {error}
-      </div>
-    )
+    return <div className="w-full h-full flex items-center justify-center text-error">{error}</div>;
   }
 
   return (
