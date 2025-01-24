@@ -26,7 +26,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className="navbar bg-base-100/90 backdrop-blur-md sticky top-0 z-50 
+    <div className="w-full h-fit navbar bg-base-100/90 backdrop-blur-md sticky top-0 z-50 
       border-b border-base-content/10 shadow-sm px-4 sm:px-6 lg:px-8">
       <div className="flex-1">
         <Link href="/" className={`btn btn-ghost text-lg sm:text-xl font-bold tracking-wider ${styles.logoText}`}>
