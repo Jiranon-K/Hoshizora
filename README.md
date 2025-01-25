@@ -40,7 +40,7 @@ Hoshizora is a modern web application built with Next.js, featuring a sleek user
 1. Clone the repository:
 ```
 bash
-git clone [repository-url](https://github.com/Jiranon-K/Hoshizora.git)
+git clone (https://github.com/Jiranon-K/Hoshizora.git)
 ```
 
 2. Install dependencies:
